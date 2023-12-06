@@ -1,0 +1,128 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.main-contain {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Three columns with equal width */
+  grid-template-rows: auto; /* Auto row height */
+  align-items: stretch; /* Stretch items vertically */
+  border: 0.5px solid black;
+  height: 100%; /* Ensure header takes full height */
+  grid-auto-flow: column; /* Maintain items in a single row */
+  background-color: white;
+}
+
+h1 {
+  grid-column: span 1; /* Spanning two columns */
+}
+
+#info {
+  grid-column: span 1; /* Spanning all three columns */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav,
+a {
+  display: flex;
+  margin-right: 20px;
+  cursor: pointer;
+  height: 100%;
+  text-decoration: none;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+}
+
+#info-sider {
+  grid-column: span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#info-sider a {
+  color: #231c34;
+}
+
+#bruker-sider {
+  grid-column: span 1;
+  background: #231c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#bruker-sider,
+a {
+  color: white;
+}
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -1;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 6fr 1fr;
+
+  height: 80vh;
+  width: 100vw;
+}
+
+#finn {
+  background-color: white;
+  width: 400px;
+  height: 200px;
+}
+
+#reis {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#linker {
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: center;
+}
+
+#linker nav {
+  background-color: orange;
+  display: flex;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#rest {
+  background-color: white;
+  width: 100vw;
+  height: 400px;
+}
