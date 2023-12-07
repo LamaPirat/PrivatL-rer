@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        background-color: beige;
+      }
+
+      #dato {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+
+      #dager {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+
+      #status {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+
+      #pris {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      #fra-med {
+        grid-area: 2 / 2 / 3 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      #vent {
+        grid-area: 2 / 3 / 3 / 4;
+
+        border: none;
+        background-color: orange;
+        padding: 12px 48px 12px 24px;
+        border-radius: 4px;
+        color: #fff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='%23fff'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 24px center;
+      }
+
+      .grid-element {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="departure">
+      <h2>Avreiser</h2>
+
+      <div id="grid">
+        <p class="grid-element" id="dato">19.12.2023</p>
+        <p class="grid-element" id="dager">8 dager</p>
+        <p class="grid-element" id="status">Utsolgt</p>
+        <p class="grid-element" id="pris">Fra kr 21.950</p>
+        <div id="fra-med">
+          <p id="fra">Fra: Oslo lufthaven</p>
+          <p id="med">Med: Laila Fossum</p>
+        </div>
+        <button id="vent">Venteliste</button>
+      </div>
+    </div>
+
+    <p>
+      kilde
+      https://stackoverflow.com/questions/63434434/css-button-with-right-arrow
+    </p>
+  </body>
+</html>
