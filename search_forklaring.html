@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- HTML-kode -->
+    <input id="input" type="text" placeholder="Søk.." />
+    <!-- Oppretter et tekstinntaksfelt med id 'input' og en plassholder for tekst "Søk.." -->
+
+    <p>kilde: https://www.w3schools.com/howto/howto_css_searchbar.asp</p>
+    <!-- En avsnittselement som inneholder kildeinformasjonen -->
+
+    <!-- CSS-kode -->
+    <style>
+      /* Stiler den "aktive" elementet for å fremheve gjeldende side */
+      #input.active {
+        background-color: #2196f3; /* Angir bakgrunnsfargen til #2196f3 (blå) når input-feltet er aktivt */
+        color: white; /* Setter tekstfargen til hvit når input-feltet er aktivt */
+      }
+
+      /* Stiler søkeboksen */
+      #input {
+        float: right; /* Flyter elementet til høyre i forhold til omgivelsene */
+        padding: 6px; /* Setter padding på 6 piksler rundt elementet */
+        border: none; /* Fjerner grensen rundt input-feltet */
+        margin-top: 8px; /* Setter margin på 8 piksler på toppen av elementet */
+        margin-right: 16px; /* Setter margin på 16 piksler på høyresiden av elementet */
+        font-size: 17px; /* Angir skriftstørrelsen til 17 piksler */
+      }
+
+      /* Overskriver grensestilen definert tidligere */
+      #input {
+        border: 1px solid #ccc; /* Setter en 1 piksel tykk, massiv grense med fargen #ccc (grå) rundt input-feltet */
+      }
+    </style>
+  </body>
+</html>

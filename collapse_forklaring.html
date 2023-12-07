@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="visInhold1()" type="button" id="collapsible">
+      <!--Kjører funksjonen "visInhold1() hver gang knappen klikkes på"-->
+      Open Collapsible
+    </button>
+    <div id="content1">
+      <p>Lorem ipum...</p>
+    </div>
+    <h1>noe</h1>
+
+    <!-- CSS-styling -->
+    <style>
+      /* Stiler knappen med id 'collapsible' */
+      #collapsible {
+        background-color: #eee; /* Setter bakgrunnsfargen til #eee (lys grå) */
+        color: #444; /* Angir teksten til fargen #444 (mørk grå) */
+        cursor: pointer; /* Endrer markøren til en peker når den er over knappen */
+        padding: 18px; /* Setter padding på 18 piksler rundt knappen */
+        width: 100%; /* Angir bredden til 100% av forelderens bredde */
+        border: none; /* Fjerner grensen rundt knappen */
+        text-align: left; /* Justerer teksten til venstre innenfor knappen */
+        outline: none; /* Fjerner fokusrammen rundt knappen ved bruk av tastatur */
+        font-size: 15px; /* Setter skriftstørrelsen til 15 piksler */
+      }
+
+      /* Stiler elementet med klassen 'active' og knappen med hover-effekt */
+      .active,
+      #collapsible:hover {
+        background-color: #ccc; /* Endrer bakgrunnsfargen til #ccc (lysere grå) når klassen 'active' er brukt eller ved hover-effekten på knappen */
+      }
+
+      /* Stiler innholdet som skal vises/skjules */
+      #content1 {
+        padding: 0 18px; /* Setter padding på 18 piksler til venstre og høyre for innholdet */
+        display: none; /* Skjuler innholdet som standard */
+        overflow: hidden; /* Skjuler innholdet som overskrider størrelsen på beholderen */
+        background-color: #f1f1f1; /* Setter bakgrunnsfargen til #f1f1f1 (lys grå) for innholdet */
+      }
+    </style>
+
+    <!-- JavaScript-skript -->
+    <script>
+      let content1 =
+        document.getElementById(
+          "content1"
+        ); /* Henter innholdet med id 'content1' fra HTML-dokumentet */
+
+      function visInhold1() {
+        if (content1.style.display === "block") {
+          /* Sjekker om innholdet er synlig ved å sjekke display-egenskapen */
+          content1.style.display =
+            "none"; /* Skjuler innholdet hvis det allerede er synlig ved å endre display-egenskapen til 'none' */
+        } else {
+          content1.style.display =
+            "block"; /* Viser innholdet hvis det er skjult ved å endre display-egenskapen til 'block' */
+        }
+      }
+    </script>
+  </body>
+</html>

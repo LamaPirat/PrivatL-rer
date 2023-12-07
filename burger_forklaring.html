@@ -24,38 +24,46 @@
     <p>kilde: https://codepen.io/alvarotrigo/pen/MWEJEWG</p>
 
     <style>
+      /* Setter margin og høyde til 100% for html og body */
       html,
       body {
         margin: 0;
         height: 100%;
       }
 
+      /* Styler toppnavigasjonen */
       .top-nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        display: flex; /* Bruker Flexbox-modellen for å organisere innholdet */
+        flex-direction: row; /* Setter hovedretningen til å være vannrett (fra venstre mot høyre) */
+        align-items: center; /* Senterer innholdet vertikalt */
+        justify-content: space-between; /* Plasserer elementene slik at det er lik mellomrom mellom dem, og de er plassert helt i starten og slutten */
         background-color: #00baf0;
-        background: linear-gradient(to left, #f46b45, #eea849);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        color: #fff;
-        height: 50px;
-        padding: 1em;
+        background: linear-gradient(
+          to left,
+          #f46b45,
+          #eea849
+        ); /* Bakgrunnsfarge som en lineær gradient */
+        color: #fff; /* Tekstfarge */
+        height: 50px; /* Høyde på navigasjonen */
+        padding: 1em; /* Padding for innholdet i navigasjonen */
       }
 
+      /* Styler menyen */
       .menu {
-        display: flex;
-        flex-direction: row;
-        list-style-type: none;
+        display: flex; /* Bruker Flexbox-modellen for å organisere innholdet */
+        flex-direction: row; /* Setter hovedretningen til å være vannrett (fra venstre mot høyre) */
+        list-style-type: none; /* Fjerner punktmarkeringer på listen */
         margin: 0;
         padding: 0;
       }
 
+      /* Styler hvert element i menyen */
       .menu > li {
-        margin-right: 1rem;
-        overflow: hidden;
+        margin-right: 1rem; /* Høyremargin for hvert element */
+        overflow: hidden; /* Skjuler overflødig innhold */
       }
 
+      /* Styler containeren for menyknappen */
       .menu-button-container {
         display: flex; /* Endret til å være permanent synlig */
         height: 100%;
@@ -66,10 +74,12 @@
         align-items: center;
       }
 
+      /* Skjuler input-elementet som brukes til menykontroll */
       #menu-toggle {
         display: none;
       }
 
+      /* Styler menyknappen og dens pseudo-elementer (før og etter) */
       .menu-button,
       .menu-button::before,
       .menu-button::after {
@@ -82,16 +92,19 @@
         border-radius: 2px;
       }
 
+      /* Styler pseudo-elementet før menyknappen */
       .menu-button::before {
         content: "";
         margin-top: -8px;
       }
 
+      /* Styler pseudo-elementet etter menyknappen */
       .menu-button::after {
         content: "";
         margin-top: 8px;
       }
 
+      /* Styling for å vise animasjon når menyknappen er krysset av (checked) */
       #menu-toggle:checked + .menu-button-container .menu-button::before {
         margin-top: 0px;
         transform: rotate(405deg);
@@ -106,10 +119,11 @@
         transform: rotate(-405deg);
       }
 
+      /* Styler menyen for mindre skjermer */
       .menu {
         position: absolute;
         top: 0;
-        margin-top: 50px;
+        margin-top: 50px; /* Plasserer menyen under toppnavigasjonen */
         left: 0;
         flex-direction: column;
         width: 100%;
@@ -117,19 +131,21 @@
         align-items: center;
       }
 
+      /* Styler hvert element i menyen for mindre skjermer */
       #menu-toggle ~ .menu li {
-        height: 0;
+        height: 0; /* Skjuler hvert element */
         margin: 0;
         padding: 0;
         border: 0;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1); /* Overgangseffekt for høydeendring */
       }
 
+      /* Styling for hvert element i menyen når menyknappen er krysset av (checked) */
       #menu-toggle:checked ~ .menu li {
         border: 1px solid #333;
-        height: 2.5em;
+        height: 2.5em; /* Viser hvert element */
         padding: 0.5em;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1); /* Overgangseffekt for høydeendring */
       }
 
       .menu > li {
@@ -137,11 +153,12 @@
         justify-content: center;
         margin: 0;
         padding: 0.5em 0;
-        width: 100%;
-        color: white;
-        background-color: #222;
+        width: 100%; /* Bredden på hvert element i menyen */
+        color: white; /* Tekstfargen */
+        background-color: #222; /* Bakgrunnsfargen på hvert element i menyen */
       }
 
+      /* Legger til en grense nederst på hvert element unntatt det siste */
       .menu > li:not(:last-child) {
         border-bottom: 1px solid #444;
       }
